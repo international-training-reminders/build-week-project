@@ -30,3 +30,31 @@
     color: @button-bg;
   }
 }
+
+@keyframes moveIn{
+  0%{
+    opacity:0;
+    transform:translateX(-80px);
+  }
+  80%{
+    transform:translateX(40px);
+  }
+  100%{
+    opacity:1;
+     transform:translate(0);
+  }
+}
+
+@keyframes btMove{
+  0%{
+    opacity:0;
+    transform:translateY(-100px);
+  }
+  80%{
+      transform:translateX(40px);
+    }
+  100%{
+    opacity:1;
+     transform:translate(0);
+  }
+}
