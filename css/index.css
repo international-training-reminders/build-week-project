@@ -477,14 +477,17 @@ img {
 body {
   background: rgba(182, 180, 180, 0.637);
 }
+a {
+  text-decoration: none;
+}
 .show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20%;
   height: 100%;
   position: fixed;
   background-color: rgba(53, 51, 53, 0.205);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-direction: column;
   transition: 0.8s;
   animation-name: moveIn;
@@ -551,6 +554,19 @@ body {
 .show .hide {
   display: none;
 }
+.logo {
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  font-size: 2rem;
+  color: #fff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: teal;
+  text-align: center;
+  line-height: 220%;
+}
 footer {
   width: 100%;
   background: #29293b;
@@ -609,73 +625,58 @@ footer p {
   border: 1px solid #fff;
   background-color: rgba(56, 38, 56, 0.13);
 }
-.header .logo {
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  font-size: 2rem;
-  color: #fff;
-  width: 5%;
-}
 .hide {
   display: none;
 }
-.about {
-  width: 100%;
+.home {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(#383636, rgba(114, 106, 106, 0.13)), url("/img/about-img.jpeg") fixed center;
-  flex-direction: column;
-  justify-content: center;
 }
-.about .about-heading {
+.home .home-heading {
   text-transform: capitalize;
-  width: 40%;
-  margin: 0 auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
   color: #d1d0d0;
 }
-.about .about-heading h1 {
+.home .home-heading h1 {
   border-bottom: 2px solid #fff;
-  padding-bottom: 10px;
-  text-align: center;
   width: 40%;
   margin: 20px auto;
 }
-.about .logo {
-  position: fixed;
-  top: 10%;
-  right: 1%;
-  font-size: 2rem;
-  color: #29293b;
-  width: 5%;
+.home .home-heading p {
+  margin-left: 5%;
 }
-.about-con {
+.home-con {
   width: 75%;
   margin: 60px 0 60px 24%;
 }
-.about-con section {
+.home-con section {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
 }
-.about-con section p {
+.home-con section p {
   width: 40%;
   margin-top: 5%;
 }
-.about-con section img {
+.home-con section img {
   width: 40%;
   height: 40%;
   border-radius: 10px;
 }
 .classes-main {
-  width: 100%;
   display: flex;
-  height: 100vh;
-  background: linear-gradient(#383636, rgba(114, 106, 106, 0.13)), url("/img/about-img.jpeg") fixed center;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  clip-path: polygon(0 0, 0 100%, 300% 0%);
+  background: linear-gradient(#383636, rgba(114, 106, 106, 0.13)), url("/img/about-img.jpeg") fixed center;
 }
 .classes-main .classes-heading {
   text-transform: capitalize;
@@ -698,34 +699,31 @@ footer p {
   width: 40%;
   margin: 20px auto;
 }
-.classes-main .logo {
-  position: fixed;
-  top: 10%;
-  right: 1%;
-  font-size: 2rem;
-  color: #29293b;
-  width: 5%;
-}
 .classes-con {
-  width: 75%;
-  margin: 60px 0 60px 24%;
-}
-.classes-con section {
+  width: 60%;
+  margin-left: 30%;
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  flex-direction: column;
+  padding: 60px 0;
 }
-.classes-con section h1 {
-  color: darkslategray;
+.classes-con div {
+  display: flex;
+  margin: 40px 0;
 }
-.classes-con section p {
-  width: 40%;
-  margin-top: 5%;
+.classes-con div section:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.classes-con section img {
-  width: 40%;
-  height: 40%;
+.classes-con div img:not(:first-child) {
+  width: 60%;
+}
+.classes-con div img {
   border-radius: 10px;
+}
+.classes-con div h1 {
+  color: #000;
 }
 input[type=text],
 select,
@@ -766,29 +764,31 @@ input[type=submit]:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .signin-header .signin {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  margin: 4em auto;
-  width: 100px;
-  height: 30px;
-  line-height: 30px;
+  width: 200px;
   background: teal;
   color: white;
   font-weight: 700;
-  text-align: center;
   font-size: 2em;
-  padding-bottom: 1.5em;
   cursor: pointer;
   border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px 20px;
+  transition: all 0.8s;
+  margin-top: 20px;
 }
-.signin-header .signin:hover {
-  background: #666;
-}
-.signin-header .signin:active {
-  background: #444;
+.signin-header .signin:hover,
+.signin-header .signin :active {
+  background: rgba(102, 102, 102, 0.137);
+  border: 1px solid teal;
+  color: #10b4b4;
 }
 .loginbox {
   display: none;
@@ -803,12 +803,14 @@ input[type=submit]:hover {
   padding: 70px 30px;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+  border-radius: 20px;
+  transition: all 2s;
 }
 h1 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
-  font-size: 22px;
+  font-size: 2.8rem;
 }
 .loginbox p {
   margin: 0;

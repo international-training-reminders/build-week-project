@@ -1,12 +1,10 @@
 
 .show{
+  .center();
   width:20%;
   height: 100%;
   position: fixed;
   background-color: rgba(53, 51, 53, 0.205);
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
   flex-direction: column;
   transition: 0.8s;
   animation-name:moveIn;
@@ -70,4 +68,19 @@
   .hide{
     display:none;
   }
+}
+
+
+.logo{
+  position: fixed;
+  top:10%;
+  right:5%;
+  font-size: 2rem;
+  color:#fff;
+  width:4rem;
+  height:4rem;
+  border-radius: 50%;
+  background: teal;
+  text-align: center;
+  line-height: 220%;
 }

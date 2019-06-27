@@ -9,28 +9,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;  
-
+    position: absolute;
+    top:0;
+    left: 0;
     .signin { 
         -webkit-user-select: none;        
         -moz-user-select: none; 
         -ms-user-select: none; 
-        margin: 4em auto;
-        width: 100px; 
-        height: 30px; 
-        line-height: 30px;
+        width: 200px; 
         background: teal;
         color: white;
         font-weight: 700;
-        text-align: center;
         font-size: 2em;
-        padding-bottom: 1.5em;
         cursor: pointer;
         border: 1px solid white;
-      }
-      
-    .signin:hover { background: #666; }
-      .signin:active { background: #444; }
-}
+        border-radius: 10px;
+        padding: 5px 20px;
+        transition: all .8s;
+        margin-top:20px;
+        &:hover,:active{
+          background: rgba(102, 102, 102, 0.137); 
+          border: 1px solid teal;
+          color:rgb(16, 180, 180);
+        }
+      }}
+
 .loginbox{
     display:none;
     width: 40%;
@@ -44,14 +47,16 @@
     box-sizing: border-box;
     padding: 70px 30px;
     transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%)
+    -webkit-transform: translate(-50%,-50%);
+    border-radius: 20px;
+    transition: all 2s;
 }
 
 h1{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 2.8rem;
 }
 
 .loginbox p{
