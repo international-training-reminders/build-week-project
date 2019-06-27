@@ -68,7 +68,7 @@
         <i class=""></i>
       </section>
     </nav>
-    <header class="header">
+    <header class="header" id="header">
       <section>
           
       <div class="messageform">
@@ -91,12 +91,22 @@
               <label for="subject">Subject</label>
               <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
           
-              <input type="submit" value="Submit">
+             <a href="#popup" > Submit</a>
+
           
             </form>
           </div>
          </section>
     </header>
+
+<section class="popup" id="popup">
+  <div class="content">
+    your message is successfully submitted
+  </div>
+<a href="#header">
+  <i class="ion-close-round"></i>
+</a>
+</section>
     <script src="/js/javascrpit.js"></script>
   </body>
 </html>
