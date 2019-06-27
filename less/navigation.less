@@ -1,86 +1,93 @@
-
-.show{
+.show {
   .center();
-  width:20%;
+  width: 20%;
   height: 100%;
   position: fixed;
   background-color: rgba(53, 51, 53, 0.205);
   flex-direction: column;
   transition: 0.8s;
-  animation-name:moveIn;
+  animation-name: moveIn;
   animation-duration: 5s;
-  &:hover{
-    background-color:@main-bg;
-    color:rgb(1, 59, 1);
+  z-index: 999;
+  &:hover {
+    background-color: @main-bg;
+    color: rgb(1, 59, 1);
   }
-  .nav-heading{
-    width:100%;
-    height:20%;
+  .nav-heading {
+    width: 100%;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-    h2{
+    h2 {
       font-size: 2rem;
       color: @silver;
     }
-    @media @mobile {width: 100%;}
+    @media @mobile {
+      width: 100%;
+    }
   }
-  .links{
-    width:100%;
-    height:40%;
-    display:flex;
+  .links {
+    width: 100%;
+    height: 50%;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-    a{
-      width:100%;
+    a {
+      width: 100%;
       text-decoration: none;
       color: @silver;
-      div{
-        width:100%;
-        display:flex;
+      margin: 10px 0;
+      div {
+        width: 100%;
+        display: flex;
         justify-content: space-around;
         align-items: center;
         font-size: 1.6rem;
         text-transform: capitalize;
-        &:hover{
+        &:hover {
           color: darkslategray;
         }
-        i{
-          font-size: 3rem;
+        i {
+          font-size: 2.3rem;
+          text-align: center;
+        }
+        span {
+          text-align: center;
         }
       }
     }
   }
-  .nav-footer{
-    width:100%;
-    height:20%;
-    display:flex;
+  .nav-footer {
+    width: 100%;
+    height: 20%;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     color: @silver;
     font-size: 1.6rem;
-    i{
-    &:hover{
-      color:rgb(2, 49, 2);
-    }}
+    i {
+      &:hover {
+        color: rgb(6, 107, 6);
+      }
+    }
   }
   // javascrpit
-  .hide{
-    display:none;
+  .hide {
+    display: none;
   }
 }
 
-
-.logo{
+.logo {
   position: fixed;
-  top:10%;
-  right:5%;
+  top: 10%;
+  right: 5%;
   font-size: 2rem;
-  color:#fff;
-  width:4rem;
-  height:4rem;
+  color: #fff;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  background: teal;
+  background: rgb(5, 151, 151);
   text-align: center;
   line-height: 220%;
 }
