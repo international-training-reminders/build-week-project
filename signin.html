@@ -1,40 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>Mentors International Training</title>
+    <title>Mentors International Training</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto"
+      rel="stylesheet"
+    />
 
-  <script src="js/index.js" async></script>
-</head>
+    <link rel="stylesheet" href="./vendores/css/ionicons.min.css" />
 
-<body>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <header class="main-navigation">
-    <div class="container nav-container">
-      <h1 class="logo-heading">Welcome to Mentors Internation</h1>
-      <nav class="nav">
-        <a class="nav-link" href="#">About Us</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
-     
-  <div class="container sign-in">
-    <header class="intro">
-      <img src="img/introphoto.jpeg" alt="Mentors Internation Logo">
-        <div class="btn">Sign In</div>
-      </div>
-    </section>
-  </div>
+    <script src="js/javascrpit.js" async></script>
+  </head>
 
-  <footer class="footer">
-    <p>Copyright Mentors Internation</p>
-  </footer>
+  <body>
+    <header class="signin-header"> 
+        <h1>Welome to Mentors International Training</h1>
+      <h3>Please Sign In</h3>
+      <button class="signin"  onclick="signFunction()">Sign In</button>
 
-</body>
+
+
+      
+        <div class="loginbox">
+                <h1 class=>Login Here</h1>
+                <form action='home.html'>
+                    <p>Username</p>
+                    <input type="text" name="" placeholder="Enter Username">
+                    <p>Password</p>
+                    <input type="password" name="" placeholder="Enter Password">
+                    <div class="left">
+                        <input type="checkbox" id="check">
+                        <label for="check">Remember Me</label>
+                      </div>
+                    <input type="submit" name="" value="Login">
+                    <a href="#">Lost your password?</a><br>
+                    <a href="#">Don't have an account?</a>
+                </form>
+                
+            </div>
+
+    </header>
+    <script src="/js/javascrpit.js"></script>
+  </body>
 </html>

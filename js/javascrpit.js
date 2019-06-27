@@ -1,4 +1,15 @@
 
+function signFunction() {
+    var x = document.querySelector(".loginbox");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
+
 class ShowNav{
     constructor(element) {
         this.element = element;
@@ -12,3 +23,5 @@ class ShowNav{
 
 const logo = document.querySelector('.logo')
 let newlogo = new ShowNav(logo)
+
+

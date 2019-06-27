@@ -19,7 +19,6 @@
   </head>
 
   <body>
-  
     <nav class="show">
       <section class="nav-heading">
         <h2>Mentors International Training</h2>
@@ -31,7 +30,7 @@
             <span>home</span>
           </div>
         </a>
-        <a href="classes.html">
+        <a href="classes.html" target="blank">
           <div>
             <i class="ion-information-circled"></i>
             <span>Classes</span>
@@ -48,12 +47,12 @@
             <i class="ion-android-call"></i>
             <span>Contact</span>
           </div>
-          <a href="signin.html">
-            <div>
-              <i class="ion-log-out"></i>
-              <span>Sign Out</span>
-            </div>
-          </a>
+        </a>
+        <a href="signin.html">
+          <div>
+            <i class="ion-log-out"></i>
+            <span>Sign Out</span>
+          </div>
         </a>
       </section>
       <section class="nav-footer">
@@ -64,31 +63,37 @@
         <i class=""></i>
       </section>
     </nav>
-
-
-    <section class="about">
-            <div class="logo">
-                    <i class="ion-drag"></i>
-             </div>
-
-            <div class="about-heading">
-                    <h2>Welcome Back</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum soluta veritatis voluptatibus dolor pariatur rem illum. Dignissimos, similique non? A esse quod neque, accusamus saepe rem tenetur illo fuga enim.</p>
-            </div>
-
-    </section>
-    <div class="about-con">
-            <section>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis aut iure ab recusandae provident voluptatibus dolorum explicabo repudiandae dignissimos amet, at omnis possimus culpa dolores quod sunt hic, non qui!</p>
-                <img src="img/introphoto.jpeg" alt="">
-            </section>
-       </div>
-
-
-      <footer>
-           <p>copyright</p>
-        </footer>
-
+    <header class="header">
+      <div class="logo">
+      </div>
+      <section>
+          
+      <div class="messageform">
+          <h3>Pleaes fill in request</h3>
+            <form action="#">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option value="training">Training</option>
+                <option value="scheduling">Scheduling</option>
+                <option value="other">Other</option>
+              </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+         </section>
+    </header>
     <script src="/js/javascrpit.js"></script>
   </body>
 </html>
