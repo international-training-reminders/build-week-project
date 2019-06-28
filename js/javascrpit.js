@@ -1,12 +1,12 @@
 
-// function signFunction() {
-//     var x = document.querySelector(".loginbox");
-//     if (x.style.display === "none") {
-//       x.style.display = "block";
-//     } else {
-//       x.style.display = "none";
-//     }
-//   }
+function signFunction() {
+    var x = document.querySelector(".loginbox");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
 
 
